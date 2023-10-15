@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
-    <title>hilfe</title>
-</head>
-<body>
-
-<h1 class="banner"> Nutrition</h1>
-<div class="container">
-    <div class="box2">
-
 <?php
-require './YouTubeVideo.php';
-require './VimeoVideo.php';
+namespace Naehnadeln\ObjectOrientedPhpWithVersionControl;
+
+require  'vendor/autoload.php';
 
 $ytv1 = new YouTubeVideo("Foodie 1", "https://www.youtube.com/embed/krIgKr3IC7s");
 $ytv2 = new YouTubeVideo("Foodie 2", "https://www.youtube.com/embed/Gmh_xMMJ2Pw");
@@ -27,6 +14,24 @@ $vv2 = new VimeoVideo("Fake Foodie 2", "https://player.vimeo.com/video/27138679"
 $vv3 = new VimeoVideo("Fake Foodie 3", "https://player.vimeo.com/video/79898890");
 $vv4 = new VimeoVideo("Fake Foodie 4", "https://player.vimeo.com/video/8063633");
 $vv5 = new VimeoVideo("Fake Foodie 5", "https://player.vimeo.com/video/466933445");
+
+$header = <<<HEADER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>hilfe</title>
+</head>
+<body>
+
+<h1 class="banner"> Nutrition</h1>
+<div class="container">
+    <div class="box2">
+
+HEADER;
+echo $header;
 
 echo '<h1>'.$ytv1->getName().'</h1>';
 echo $ytv1 ->getEmbededCode();
@@ -87,9 +92,10 @@ echo '<h1>'.$vv5->getName().'</h1>';
 echo $vv5 ->getEmbededCode();
 echo <<< 'HTML'
 </div>
-<div class="box2">
-HTML;
-?>
-
 </body>
+</html>
+HTML;
+
+
+
 

@@ -1,9 +1,13 @@
 <?php
-require_once 'AVideo.php';
-class YouTubeVideo extends AVideo {
+
+namespace Naehnadeln\ObjectOrientedPhpWithVersionControl;
+
+class YouTubeVideo extends AVideo
+{
     private string $source;
 
-    public function __construct($name, $source) {
+    public function __construct($name, $source)
+    {
         parent::__construct($name);
         $this->source = $source;
     }
@@ -17,7 +21,7 @@ class YouTubeVideo extends AVideo {
     public function getEmbededCode(): string
     {
 
-        return '<iframe class="box" src="'.$this->source.'"
+        return '<iframe class="box" src="' . $this->source . '"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>';

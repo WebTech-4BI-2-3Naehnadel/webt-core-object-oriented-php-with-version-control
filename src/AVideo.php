@@ -1,9 +1,13 @@
 <?php
-require_once 'Video.php';
-abstract class AVideo implements Video {
+
+namespace Naehnadeln\ObjectOrientedPhpWithVersionControl;
+
+abstract class AVideo implements Video
+{
     private string $name;
 
-    public function __construct($name) {
+    public function __construct($name)
+    {
         $this->name = $name;
     }
 

@@ -1,10 +1,13 @@
 <?php
-require_once 'AVideo.php';
+
+namespace Naehnadeln\ObjectOrientedPhpWithVersionControl;
+
 class VimeoVideo extends AVideo
 {
     private string $source;
 
-    public function __construct($name, $source) {
+    public function __construct($name, $source)
+    {
         parent::__construct($name);
         $this->source = $source;
     }
@@ -17,6 +20,6 @@ class VimeoVideo extends AVideo
     public function getEmbededCode(): string
     {
 
-        return '<iframe src="'.$this->source.'" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+        return '<iframe src="' . $this->source . '"allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
     }
 }
