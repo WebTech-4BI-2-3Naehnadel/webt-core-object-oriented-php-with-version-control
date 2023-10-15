@@ -1,0 +1,16 @@
+{
+    "name": "naehnadeln/object-oriented-php-with-version-control",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Naehnadeln\\ObjectOrientedPhpWithVersionControl\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stefi",
+            "email": "smanastirska@gmail.com"
+        }
+    ],
+    "require": {}
+}
