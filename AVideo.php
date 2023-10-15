@@ -1,5 +1,5 @@
 <?php
-
+require_once 'Video.php';
 abstract class AVideo implements Video {
     private string $name;
 
