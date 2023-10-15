@@ -21,9 +21,15 @@ class YouTubeVideo extends AVideo
     public function getEmbededCode(): string
     {
 
-        return '<iframe class="box" src="' . $this->source . '"
+        return <<< ELEMENT
+<div class="box2">
+<h1>Title: "{$this->getName()}" </h1>
+<h2>Origin: YouTube</h2>
+<iframe class="box" src="{$this->getSource()}"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>';
+                allowfullscreen></iframe>
+</div>
+ELEMENT;
     }
 }

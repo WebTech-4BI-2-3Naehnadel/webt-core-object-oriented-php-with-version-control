@@ -20,6 +20,12 @@ class VimeoVideo extends AVideo
     public function getEmbededCode(): string
     {
 
-        return '<iframe src="' . $this->source . '"allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+        return <<<ELEMENT
+<div class="box2">
+<h1> Title: "{$this->getName()}"</h1>
+<h2>Origin: Vimeo</h2>
+<iframe class="box" src="{$this->getSource()}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</div>
+ELEMENT;
     }
 }

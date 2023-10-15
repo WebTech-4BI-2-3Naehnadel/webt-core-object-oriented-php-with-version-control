@@ -3,17 +3,17 @@ namespace Naehnadeln\ObjectOrientedPhpWithVersionControl;
 
 require  'vendor/autoload.php';
 
-$ytv1 = new YouTubeVideo("Foodie 1", "https://www.youtube.com/embed/krIgKr3IC7s");
-$ytv2 = new YouTubeVideo("Foodie 2", "https://www.youtube.com/embed/Gmh_xMMJ2Pw");
-$ytv3 = new YouTubeVideo("Foodie 3", "https://www.youtube.com/embed/c06dTj0v0sM");
-$ytv4 = new YouTubeVideo("Foodie 4", "https://www.youtube.com/embed/Urr-MKKs8zc");
-$ytv5 = new YouTubeVideo("Foodie 5", "https://www.youtube.com/embed/dN7c2JniR8U");
+$ytv1 = new YouTubeVideo("Explore the Six Key Nutrients", "https://www.youtube.com/embed/FmpWnmqYVLk?si=GHux_QI9gQ65_Mfv");
+$ytv2 = new YouTubeVideo("How to create a healthy Plate", "https://www.youtube.com/embed/Gmh_xMMJ2Pw");
+$ytv3 = new YouTubeVideo("Nutrition for a Healthy Life", "https://www.youtube.com/embed/c06dTj0v0sM");
+$ytv4 = new YouTubeVideo("Nutrition: Importance of the Five Food Groups", "https://www.youtube.com/embed/47k0VUE6aZU?si=Gaf_JbHIwQY1zRVJ");
+$ytv5 = new YouTubeVideo("GCSE Biology -What are Nutrients?", "https://www.youtube.com/embed/dN7c2JniR8U");
 
-$vv1 = new VimeoVideo("Fake Foodie 1", "https://player.vimeo.com/video/64981602");
-$vv2 = new VimeoVideo("Fake Foodie 2", "https://player.vimeo.com/video/27138679");
-$vv3 = new VimeoVideo("Fake Foodie 3", "https://player.vimeo.com/video/79898890");
-$vv4 = new VimeoVideo("Fake Foodie 4", "https://player.vimeo.com/video/8063633");
-$vv5 = new VimeoVideo("Fake Foodie 5", "https://player.vimeo.com/video/466933445");
+$vv1 = new VimeoVideo("Infographics Nutrition", "https://player.vimeo.com/video/64981602");
+$vv2 = new VimeoVideo("Food-Radames", "https://player.vimeo.com/video/27138679");
+$vv3 = new VimeoVideo("Healthy Food Transisition", "https://player.vimeo.com/video/79898890");
+$vv4 = new VimeoVideo("Healthy Food, Healthy Body, Healthy Mind", "https://player.vimeo.com/video/8063633");
+$vv5 = new VimeoVideo("The Healthy Eating Song", "https://player.vimeo.com/video/466933445");
 
 $header = <<<HEADER
 <!DOCTYPE html>
@@ -22,79 +22,35 @@ $header = <<<HEADER
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>hilfe</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Nutrition</title>
 </head>
-<body>
 
-<h1 class="banner"> Nutrition</h1>
-<div class="container">
-    <div class="box2">
 
 HEADER;
 echo $header;
 
-echo '<h1>'.$ytv1->getName().'</h1>';
-echo $ytv1 ->getEmbededCode();
-echo <<< 'HTML'
-</div>
-<div class="box2">
-HTML;
-echo '<h1>'.$ytv2->getName().'</h1>';
-echo $ytv2 ->getEmbededCode();
-echo <<< 'HTML'
-</div>
-<div class="box2">
-HTML;
-echo '<h1>'.$ytv3->getName().'</h1>';
-echo $ytv3 ->getEmbededCode();
-echo <<< 'HTML'
-</div>
-<div class="box2">
-HTML;
-echo '<h1>'.$ytv4->getName().'</h1>';
-echo $ytv4 ->getEmbededCode();
-echo <<< 'HTML'
-</div>
-<div class="box2">
-HTML;
-echo '<h1>'.$ytv5->getName().'</h1>';
-echo $ytv5 ->getEmbededCode();
-echo <<< 'HTML'
-</div>
-<div class="box2">
-HTML;
+$body = <<<BODY
+<body>
+<h1 class="banner"> Nutrition</h1>
+<div class="container">
+{$ytv1->getEmbededCode()}
+{$ytv2->getEmbededCode()}
+{$ytv3->getEmbededCode()}
+{$ytv4->getEmbededCode()}
+{$ytv5->getEmbededCode()}
 
-echo '<h1>'.$vv1->getName().'</h1>';
-echo $vv1 ->getEmbededCode();
-echo <<< 'HTML'
-</div>
-<div class="box2">
-HTML;
-echo '<h1>'.$vv2->getName().'</h1>';
-echo $vv2 ->getEmbededCode();
-echo <<< 'HTML'
-</div>
-<div class="box2">
-HTML;
-echo '<h1>'.$vv3->getName().'</h1>';
-echo $vv3 ->getEmbededCode();
-echo <<< 'HTML'
-</div>
-<div class="box2">
-HTML;
-echo '<h1>'.$vv4->getName().'</h1>';
-echo $vv4 ->getEmbededCode();
-echo <<< 'HTML'
-</div>
-<div class="box2">
-HTML;
-echo '<h1>'.$vv5->getName().'</h1>';
-echo $vv5 ->getEmbededCode();
-echo <<< 'HTML'
+{$vv1->getEmbededCode()}
+{$vv2->getEmbededCode()}
+{$vv3->getEmbededCode()}
+{$vv4->getEmbededCode()}
+{$vv5->getEmbededCode()}
 </div>
 </body>
 </html>
-HTML;
+BODY;
+echo $body;
+
 
 
 
