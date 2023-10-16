@@ -22,7 +22,7 @@ class VimeoVideo extends AVideo
 
         return <<<ELEMENT
 <div class="box2">
-<h1> Title: "{$this->getName()}"</h1>
+<h1>Title: "{$this->getName()}"</h1>
 <h2>Origin: Vimeo</h2>
 <iframe class="box" src="{$this->getSource()}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 </div>
